@@ -1,13 +1,4 @@
 bootnode:
-  nodeSelector:
-    nospot: "true"
-  tolerations:
-    - key: "nospot"
-      operator: "Exists"
-      effect: "NoSchedule"
-    - key: "nospot"
-      operator: "Exists"
-      effect: "NoExecute"
   terminationGracePeriodSeconds: 3
   updateStrategy:
     type: "OnDelete"
@@ -31,15 +22,6 @@ bootnode:
       cpu: null
 
 swarm:
-  nodeSelector:
-    nospot: "true"
-  tolerations:
-    - key: "nospot"
-      operator: "Exists"
-      effect: "NoSchedule"
-    - key: "nospot"
-      operator: "Exists"
-      effect: "NoExecute"
   metricsEnabled: true
   tracingEnabled: true
   profilingEnabled: true
@@ -132,15 +114,6 @@ swarm:
         cpu: null
 
 influxdb:
-  nodeSelector:
-    nospot: "true"
-  tolerations:
-    - key: "nospot"
-      operator: "Exists"
-      effect: "NoSchedule"
-    - key: "nospot"
-      operator: "Exists"
-      effect: "NoExecute"
   resources:
     requests:
       memory: 256Mi
@@ -159,15 +132,6 @@ influxdb:
       trace_logging_enabled: true
 
 grafana:
-  nodeSelector:
-    nospot: "true"
-  tolerations:
-    - key: "nospot"
-      operator: "Exists"
-      effect: "NoSchedule"
-    - key: "nospot"
-      operator: "Exists"
-      effect: "NoExecute"
   datasources:
     datasources.yaml:
       apiVersion: 1
